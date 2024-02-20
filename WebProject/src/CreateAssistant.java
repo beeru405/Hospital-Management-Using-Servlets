@@ -50,7 +50,7 @@ public class CreateAssistant extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		Connection c;
 		try {
-		c = DriverManager.getConnection("jdbc:mysql://localhost:3306/hospital","root","root");	
+		c = DriverManager.getConnection("jdbc:mysql://192.168.138.126:3306/hospital","root","root");	
 		String sql = "insert into assistant(name,email,phone,joindate,password) values(?,?,?,?,?)";
 		PreparedStatement ps = c.prepareStatement(sql);
 		ps.setString(1,name);
